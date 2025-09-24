@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - JobBoard Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-briefcase me-2"></i>JobBoard Pro
+            </a>
+            <div class="d-flex align-items-center">
+                <div class="dropdown me-3">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-user me-2"></i>Sarah Johnson
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="job-seeker-profile.html">Profile</a></li>
+                        <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="margin-top: 80px;">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-2 dashboard-sidebar">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="job-seeker-dashboard.html">
+                            <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="my-applications.html">
+                            <i class="fas fa-file-alt me-2"></i>My Applications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="saved-jobs.html">
+                            <i class="fas fa-bookmark me-2"></i>Saved Jobs
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="job-alerts.html">
+                            <i class="fas fa-bell me-2"></i>Job Alerts
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="my-profile.html">
+                            <i class="fas fa-user me-2"></i>My Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume-builder.html">
+                            <i class="fas fa-file-pdf me-2"></i>Resume Builder
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="settings.html">
+                            <i class="fas fa-cog me-2"></i>Settings
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-10 dashboard-content">
+                <!-- Page Header -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h2 class="fw-bold text-dark mb-1">My Dashboard</h2>
+                        <p class="text-muted mb-0">Welcome back, Sarah! Here's your job search overview.</p>
+                    </div>
+                    <div>
+                        <a href="jobs.html" class="btn btn-primary">
+                            <i class="fas fa-search me-2"></i>Find Jobs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="row mb-4">
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="stats-card">
+                            <div class="d-flex align-items-center">
+                                <div class="stats-icon me-3">
+                                    <i class="fas fa-file-alt fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="fw-bold mb-0">8</h3>
+                                    <p class="text-muted mb-0">Applications</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="stats-card">
+                            <div class="d-flex align-items-center">
+                                <div class="stats-icon me-3">
+                                    <i class="fas fa-bookmark fa-2x text-success"></i>
+                                </div>
+                                <div>
+                                    <h3 class="fw-bold mb-0">12</h3>
+                                    <p class="text-muted mb-0">Saved Jobs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="stats-card">
+                            <div class="d-flex align-items-center">
+                                <div class="stats-icon me-3">
+                                    <i class="fas fa-eye fa-2x text-info"></i>
+                                </div>
+                                <div>
+                                    <h3 class="fw-bold mb-0">45</h3>
+                                    <p class="text-muted mb-0">Profile Views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="stats-card">
+                            <div class="d-flex align-items-center">
+                                <div class="stats-icon me-3">
+                                    <i class="fas fa-bell fa-2x text-warning"></i>
+                                </div>
+                                <div>
+                                    <h3 class="fw-bold mb-0">3</h3>
+                                    <p class="text-muted mb-0">Job Alerts</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="row">
+                    <div class="col-lg-8">
+                        <!-- Application Status -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-white">
+                                <h5 class="fw-bold mb-0">Application Status</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Position</th>
+                                                <th>Company</th>
+                                                <th>Applied</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="fw-semibold">Senior Software Engineer</div>
+                                                    <small class="text-muted">Full Time</small>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&q=80" 
+                                                             alt="Company" class="rounded-circle me-2" style="width: 24px; height: 24px;">
+                                                        <div>TechCorp Inc.</div>
+                                                    </div>
+                                                </td>
+                                                <td>2 days ago</td>
+                                                <td><span class="badge bg-warning">Under Review</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary">View</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="fw-semibold">Product Manager</div>
+                                                    <small class="text-muted">Full Time</small>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&q=80" 
+                                                             alt="Company" class="rounded-circle me-2" style="width: 24px; height: 24px;">
+                                                        <div>InnovateLab</div>
+                                                    </div>
+                                                </td>
+                                                <td>1 week ago</td>
+                                                <td><span class="badge bg-success">Interview Scheduled</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary">View</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="fw-semibold">UX Designer</div>
+                                                    <small class="text-muted">Contract</small>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&q=80" 
+                                                             alt="Company" class="rounded-circle me-2" style="width: 24px; height: 24px;">
+                                                        <div>DesignStudio</div>
+                                                    </div>
+                                                </td>
+                                                <td>2 weeks ago</td>
+                                                <td><span class="badge bg-danger">Rejected</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary">View</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="my-applications.html" class="btn btn-outline-primary">View All Applications</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recommended Jobs -->
+                        <div class="card">
+                            <div class="card-header bg-white">
+                                <h5 class="fw-bold mb-0">Recommended for You</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="job-card">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&q=80" 
+                                                         alt="Company" class="company-logo me-3" style="width: 40px; height: 40px; border-radius: 6px;">
+                                                    <div>
+                                                        <h6 class="job-title mb-1">Data Scientist</h6>
+                                                        <p class="job-company mb-0">DataTech</p>
+                                                    </div>
+                                                </div>
+                                                <div class="text-end">
+                                                    <div class="job-salary text-primary fw-bold">$110,000 - $140,000</div>
+                                                    <div class="job-type">
+                                                        <span class="badge bg-primary me-1">Full Time</span>
+                                                        <span class="badge bg-success">Remote</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="job-location mb-2">
+                                                <i class="fas fa-map-marker-alt me-1"></i>Seattle, WA
+                                            </p>
+                                            <div class="job-actions">
+                                                <a href="job-detail.html" class="btn btn-primary btn-sm">Apply</a>
+                                                <button class="btn btn-outline-primary btn-sm">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="job-card">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&q=80" 
+                                                         alt="Company" class="company-logo me-3" style="width: 40px; height: 40px; border-radius: 6px;">
+                                                    <div>
+                                                        <h6 class="job-title mb-1">Frontend Developer</h6>
+                                                        <p class="job-company mb-0">WebCorp</p>
+                                                    </div>
+                                                </div>
+                                                <div class="text-end">
+                                                    <div class="job-salary text-primary fw-bold">$90,000 - $120,000</div>
+                                                    <div class="job-type">
+                                                        <span class="badge bg-primary me-1">Full Time</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="job-location mb-2">
+                                                <i class="fas fa-map-marker-alt me-1"></i>New York, NY
+                                            </p>
+                                            <div class="job-actions">
+                                                <a href="job-detail.html" class="btn btn-primary btn-sm">Apply</a>
+                                                <button class="btn btn-outline-primary btn-sm">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="jobs.html" class="btn btn-outline-primary">View More Jobs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Profile Completion -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-white">
+                                <h5 class="fw-bold mb-0">Profile Completion</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 75%"></div>
+                                </div>
+                                <p class="text-muted mb-3">Complete your profile to get better job matches</p>
+                                <div class="profile-items">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        <span class="small">Basic Information</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        <span class="small">Work Experience</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-times text-danger me-2"></i>
+                                        <span class="small">Skills & Certifications</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-times text-danger me-2"></i>
+                                        <span class="small">Portfolio/Projects</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm w-100 mt-3">Complete Profile</button>
+                            </div>
+                        </div>
+
+                        <!-- Job Alerts -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-white">
+                                <h5 class="fw-bold mb-0">Job Alerts</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert-item mb-3">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <div class="fw-semibold">Software Engineer</div>
+                                            <small class="text-muted">San Francisco, CA</small>
+                                        </div>
+                                        <span class="badge bg-primary">3 new</span>
+                                    </div>
+                                </div>
+                                <div class="alert-item mb-3">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <div class="fw-semibold">Product Manager</div>
+                                            <small class="text-muted">Remote</small>
+                                        </div>
+                                        <span class="badge bg-primary">1 new</span>
+                                    </div>
+                                </div>
+                                <div class="alert-item">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <div class="fw-semibold">UX Designer</div>
+                                            <small class="text-muted">New York, NY</small>
+                                        </div>
+                                        <span class="badge bg-primary">2 new</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-primary btn-sm w-100 mt-3">Manage Alerts</button>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-white">
+                                <h5 class="fw-bold mb-0">Recent Activity</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="activity-item d-flex align-items-start mb-3">
+                                    <div class="activity-icon me-3">
+                                        <i class="fas fa-paper-plane text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <div class="fw-semibold">Application submitted</div>
+                                        <small class="text-muted">Senior Software Engineer at TechCorp</small>
+                                        <div class="text-muted small">2 days ago</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item d-flex align-items-start mb-3">
+                                    <div class="activity-icon me-3">
+                                        <i class="fas fa-bookmark text-success"></i>
+                                    </div>
+                                    <div>
+                                        <div class="fw-semibold">Job saved</div>
+                                        <small class="text-muted">Data Scientist at DataTech</small>
+                                        <div class="text-muted small">3 days ago</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item d-flex align-items-start mb-3">
+                                    <div class="activity-icon me-3">
+                                        <i class="fas fa-eye text-info"></i>
+                                    </div>
+                                    <div>
+                                        <div class="fw-semibold">Profile viewed</div>
+                                        <small class="text-muted">5 companies viewed your profile</small>
+                                        <div class="text-muted small">1 week ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tips -->
+                        <div class="card">
+                            <div class="card-header bg-white">
+                                <h5 class="fw-bold mb-0">Career Tips</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="tip-item mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <i class="fas fa-lightbulb text-warning me-2 mt-1"></i>
+                                        <div>
+                                            <div class="fw-semibold">Update Your Resume</div>
+                                            <small class="text-muted">Keep your resume current with recent projects and skills</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tip-item mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <i class="fas fa-lightbulb text-warning me-2 mt-1"></i>
+                                        <div>
+                                            <div class="fw-semibold">Network Actively</div>
+                                            <small class="text-muted">Connect with professionals in your field</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tip-item">
+                                    <div class="d-flex align-items-start">
+                                        <i class="fas fa-lightbulb text-warning me-2 mt-1"></i>
+                                        <div>
+                                            <div class="fw-semibold">Customize Applications</div>
+                                            <small class="text-muted">Tailor your cover letter for each position</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
