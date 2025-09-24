@@ -619,6 +619,40 @@ body {
     border-color: var(--primary-color);
 }
 
+/* Two-Column Job Layout */
+#jobListings.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.75rem;
+}
+
+#jobListings.row > .col-lg-6 {
+    padding: 0 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Job Cards */
+@media (max-width: 768px) {
+    #jobListings.row > .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+    #jobListings.row > .col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    #jobListings.row > .col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
 .job-title {
     font-size: 1.25rem;
     font-weight: 600;

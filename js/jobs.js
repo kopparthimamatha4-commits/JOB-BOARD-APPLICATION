@@ -20,6 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
 // Load all jobs
 function loadAllJobs() {
     const allJobs = window.JobBoard.sampleJobs;
+    // Set default to grid view (two columns)
+    const jobListingsContainer = document.getElementById('jobListings');
+    if (jobListingsContainer) {
+        jobListingsContainer.classList.add('grid-view');
+        jobListingsContainer.classList.remove('list-view');
+    }
     displayJobs(allJobs);
     updateJobCount(allJobs.length);
 }
@@ -240,11 +246,20 @@ function initializeViewToggle() {
     const jobListings = document.getElementById('jobListings');
     
     if (listViewBtn && gridViewBtn && jobListings) {
+        // Set default to grid view
+        gridViewBtn.classList.add('active');
+        listViewBtn.classList.remove('active');
+        jobListings.classList.add('row');
+        jobListings.classList.remove('list-view');
+        
         listViewBtn.addEventListener('click', function() {
             this.classList.add('active');
             gridViewBtn.classList.remove('active');
             jobListings.classList.remove('row');
             jobListings.classList.add('list-view');
+            // Refresh display
+            const currentJobs = window.JobBoard.sampleJobs;
+            displayJobs(currentJobs);
         });
         
         gridViewBtn.addEventListener('click', function() {
@@ -252,6 +267,9 @@ function initializeViewToggle() {
             listViewBtn.classList.remove('active');
             jobListings.classList.remove('list-view');
             jobListings.classList.add('row');
+            // Refresh display
+            const currentJobs = window.JobBoard.sampleJobs;
+            displayJobs(currentJobs);
         });
     }
 }
